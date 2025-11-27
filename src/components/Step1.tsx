@@ -31,7 +31,7 @@ export const Step1 = () => {
             type="email"
             id="email"
             className="w-full border border-gray-300 rounded-md p-2"
-            placeholder="e.g."
+            placeholder="e.g. stephenking@lorem.com"
           ></input>
         </div>
         <div>

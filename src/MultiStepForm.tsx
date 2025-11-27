@@ -10,6 +10,12 @@ export const MultiStepForm = () => {
   const [step, setStep] = useState(1);
   const [isFinished, setIsFinished] = useState(false);
 
+  const [duration, setDuration] = useState<"monthly" | "yearly">("monthly");
+  const [services, setServices] = useState(false);
+  const [storage, setStorage] = useState(false);
+  const [profile, setProfile] = useState(false);
+  const [plan, setPlan] = useState<"arcade" | "advanced" | "pro">("arcade");
+
   const next = () => {
     if (step === 4) return;
     setStep(step + 1);
@@ -24,9 +30,35 @@ export const MultiStepForm = () => {
       <NavBar step={step} setStep={setStep} />
       <div className="flex flex-col mt-8 px-16 min-w-[600px]">
         {!isFinished && step === 1 && <Step1 />}
-        {!isFinished && step === 2 && <Step2 />}
-        {!isFinished && step === 3 && <Step3 />}
-        {!isFinished && step === 4 && <Step4 />}
+        {!isFinished && step === 2 && (
+          <Step2
+            duration={duration}
+            setDuration={setDuration}
+            plan={plan}
+            setPlan={setPlan}
+          />
+        )}
+        {!isFinished && step === 3 && (
+          <Step3
+            duration={duration}
+            services={services}
+            setServices={setServices}
+            storage={storage}
+            setStorage={setStorage}
+            profile={profile}
+            setProfile={setProfile}
+          />
+        )}
+        {!isFinished && step === 4 && (
+          <Step4
+            duration={duration}
+            setDuration={setDuration}
+            services={services}
+            storage={storage}
+            profile={profile}
+            plan={plan}
+          />
+        )}
 
         {isFinished ? (
           <Finished />

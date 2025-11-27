@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+button {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(213, 96%, 25%);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: hsl(213, 96%, 18%);
+}
+
+/* PRIMARY */
+.bg-primary-950 {
+  background-color: hsl(213, 96%, 18%);
+}
+.text-primary-950 {
+  color: hsl(213, 96%, 18%);
+}
+.border-primary-950 {
+  border-color: hsl(213, 96%, 18%);
+}
+
+.bg-primary-600 {
+  background-color: hsl(243, 100%, 62%);
+}
+.text-primary-600 {
+  color: hsl(243, 100%, 62%);
+}
+.border-primary-600 {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.bg-primary-300 {
+  background-color: hsl(228, 100%, 84%);
+}
+.text-primary-300 {
+  color: hsl(228, 100%, 84%);
+}
+.border-primary-300 {
+  border-color: hsl(228, 100%, 84%);
+}
+
+.bg-primary-200 {
+  background-color: hsl(206, 94%, 87%);
+}
+.text-primary-200 {
+  color: hsl(206, 94%, 87%);
+}
+.border-primary-200 {
+  border-color: hsl(206, 94%, 87%);
+}
+
+.bg-primary-500 {
+  background-color: hsl(354, 84%, 57%);
+}
+.text-primary-500 {
+  color: hsl(354, 84%, 57%);
+}
+.border-primary-500 {
+  border-color: hsl(354, 84%, 57%);
+}
+
+/* NEUTRAL */
+.bg-neutral-500 {
+  background-color: hsl(0, 0%, 95%);
+}
+.text-neutral-500 {
+  color: hsl(231, 11%, 63%);
+}
+.border-neutral-500 {
+  border-color: hsl(231, 11%, 63%);
+}
+
+.bg-neutral-200 {
+  background-color: hsl(229, 24%, 87%);
+}
+.text-neutral-200 {
+  color: hsl(229, 24%, 87%);
+}
+.border-neutral-200 {
+  border-color: hsl(229, 24%, 87%);
+}
+
+.bg-neutral-100 {
+  background-color: hsl(218, 100%, 97%);
+}
+.text-neutral-100 {
+  color: hsl(218, 100%, 97%);
+}
+.border-neutral-100 {
+  border-color: hsl(218, 100%, 97%);
+}
+
+.bg-neutral-50 {
+  background-color: hsl(231, 100%, 99%);
+}
+.text-neutral-50 {
+  color: hsl(231, 100%, 99%);
+}
+.border-neutral-50 {
+  border-color: hsl(231, 100%, 99%);
+}
+
+.bg-neutral-white {
+  background-color: hsl(0, 100%, 100%);
+}
+.text-neutral-white {
+  color: hsl(0, 100%, 100%);
+}
+.border-neutral-white {
+  border-color: hsl(0, 100%, 100%);
+}
+
+/* SWITCH */
+.switch {
+  --secondary-container: hsl(213, 96%, 18%);
+  --primary: white;
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
+}
+
+.switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.2s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  background-color: var(--primary);
+}
+
+input:checked + .slider {
+  background-color: var(--secondary-container);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-container);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.9em);
+}

@@ -1,0 +1,57 @@
+export const Step3 = () => {
+  return (
+    <>
+      <header>
+        <h2 className="text-2xl font-bold mb-4 ">Pick add-ons</h2>
+        <p className="text-gray-400 mb-6">
+          Add-ons help enhance your gaming experience.
+        </p>
+      </header>
+      <main>
+        <section className="flex flex-col gap-4">
+          <div className="flex items-center border border-primary-600 rounded-xl p-4 cursor-pointer hover:border-[hsl(213,96%,18%)]">
+            <input
+              type="checkbox"
+              className="mr-4 size-4 rounded border border-primary-600 accent-primary-600"
+            />
+
+            <div className="flex flex-col">
+              <div className="text-s font-medium text-primary-600 mb-1">
+                Online service
+              </div>
+              <div className="text-neutral-600 text-[0.8em] font-medium">
+                Access to multiplayer games
+              </div>
+            </div>
+            <div className="ml-auto text-primary-600 font-medium">+$1/mo</div>
+          </div>
+          <div className="flex items-center border border-primary-600 rounded-xl p-4 cursor-pointer hover:border-[hsl(213,96%,18%)]">
+            <input type="checkbox" className="mr-4 size-4" />
+            <div className="flex flex-col">
+              <div className="text-s font-medium text-primary-600 mb-1">
+                Larger storage
+              </div>
+              <div className="text-neutral-600 text-[0.8em] font-medium">
+                Extra 1TB of cloud save
+              </div>
+            </div>
+            <div className="ml-auto text-primary-600 font-medium">+$2/mo</div>
+          </div>
+          <div className="flex items-center border border-primary-600 rounded-xl p-4 cursor-pointer hover:border-[hsl(213,96%,18%)]">
+            <input type="checkbox" className="mr-4 size-4" />
+            <div className="flex flex-col">
+              <div className="text-s font-medium text-primary-600 mb-1">
+                Customizable profile
+              </div>
+              <div className="text-neutral-600 text-[0.8em] font-medium">
+                Custom theme on your profile
+              </div>
+            </div>
+            <div className="ml-auto text-primary-600 font-medium">+$2/mo</div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+};
+export default Step3;

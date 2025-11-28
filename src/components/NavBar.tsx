@@ -5,7 +5,7 @@ type Props = {
 
 export const NavBar = ({ step, setStep }: Props) => {
   return (
-    <div className="bg-[url('/assets/images/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover w-64 min-h-full rounded-xl p-6">
+    <div className="bg-[url('/assets/images/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover w-64 min-h-full  rounded-xl p-6">
       <div
         onClick={() => setStep(1)}
         className="flex items-center gap-4 mb-8 cursor-pointer"

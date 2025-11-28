@@ -1,3 +1,5 @@
+import PlanCard from "./PlanCard";
+
 type Props = {
   duration: "monthly" | "yearly";
   setDuration: React.Dispatch<React.SetStateAction<"monthly" | "yearly">>;
@@ -9,76 +11,45 @@ export const Step2 = ({ duration, setDuration, plan, setPlan }: Props) => {
   return (
     <div>
       <header>
-        <h2 className="text-2xl font-bold mb-4 ">Select your plan</h2>
+        <h2 className="text-2xl font-bold mb-4">Select your plan</h2>
         <p className="text-gray-400 mb-6">
           You have the option of monthly or yearly billing.
         </p>
       </header>
+
       <main>
         <section className="flex justify-between">
-          <div
-            className={`flex flex-col justify-between rounded-xl h-40  w-[30%] p-4 cursor-pointer  ${
-              plan === "arcade"
-                ? "border border-[hsl(213,96%,18%)]"
-                : "border border-gray-300 hover:border-[hsl(213,96%,18%)]"
-            }`}
+          <PlanCard
+            active={plan === "arcade"}
+            duration={duration}
             onClick={() => setPlan("arcade")}
-          >
-            <div>
-              <img src="/assets/images/icon-arcade.svg" alt="Arcade icon" />
-            </div>
-            <div>
-              <div className="text-s font-medium text-primary-600 mb-1">
-                Arcade
-              </div>
-              <div className="text-neutral-600 text-[0.8em] font-medium">
-                {duration === "monthly" ? "$9/mo" : "$90/yr"}
-              </div>
-            </div>
-          </div>
+            title="Arcade"
+            icon="/assets/images/icon-arcade.svg"
+            priceMonthly={9}
+            priceYearly={90}
+          />
 
-          <div
-            className={`flex flex-col justify-between rounded-xl h-40  w-[30%] p-4 cursor-pointer  ${
-              plan === "advanced"
-                ? "border border-[hsl(213,96%,18%)]"
-                : "border border-gray-300 hover:border-[hsl(213,96%,18%)]"
-            }`}
+          <PlanCard
+            active={plan === "advanced"}
+            duration={duration}
             onClick={() => setPlan("advanced")}
-          >
-            <div>
-              <img src="/assets/images/icon-advanced.svg" alt="Advanced icon" />
-            </div>
-            <div>
-              <div className="text-s font-medium text-primary-600 mb-1">
-                Advanced
-              </div>
-              <div className="text-neutral-600 text-[0.8em] font-medium">
-                {duration === "monthly" ? "$12/mo" : "$120/yr"}
-              </div>
-            </div>
-          </div>
+            title="Advanced"
+            icon="/assets/images/icon-advanced.svg"
+            priceMonthly={12}
+            priceYearly={120}
+          />
 
-          <div
-            className={`flex flex-col justify-between rounded-xl h-40  w-[30%] p-4 cursor-pointer  ${
-              plan === "pro"
-                ? "border border-[hsl(213,96%,18%)]"
-                : "border border-gray-300 hover:border-[hsl(213,96%,18%)]"
-            }`}
+          <PlanCard
+            active={plan === "pro"}
+            duration={duration}
             onClick={() => setPlan("pro")}
-          >
-            <div>
-              <img src="/assets/images/icon-pro.svg" alt="Pro icon" />
-            </div>
-            <div>
-              <div className="text-s font-medium text-primary-600 mb-1">
-                Pro
-              </div>
-              <div className="text-neutral-600 text-[0.8em] font-medium">
-                {duration === "monthly" ? "$15/mo" : "$150/yr"}
-              </div>
-            </div>
-          </div>
+            title="Pro"
+            icon="/assets/images/icon-pro.svg"
+            priceMonthly={15}
+            priceYearly={150}
+          />
         </section>
+
         <div className="flex justify-center items-center gap-5 h-12 bg-neutral-500 rounded-xl mt-6">
           <div>Monthly</div>
 
@@ -92,10 +63,12 @@ export const Step2 = ({ duration, setDuration, plan, setPlan }: Props) => {
             />
             <span className="slider"></span>
           </label>
+
           <div>Yearly</div>
         </div>
       </main>
     </div>
   );
 };
+
 export default Step2;

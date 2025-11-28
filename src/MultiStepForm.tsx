@@ -76,12 +76,12 @@ export const MultiStepForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 w-[900px] min-h-[550px] flex">
-      <div className="shrink-0">
+    <div className="bg-white rounded-2xl p-6 w-[900px] min-h-[550px] flex items-stretch">
+      <div className="shrink-0 ">
         <NavBar step={step} setStep={setStep} />
       </div>
 
-      <div className="flex flex-col mt-8 px-16 min-w-[600px]">
+      <div className="flex flex-col mt-8 px-16 min-w-[600px] ">
         {!isFinished && step === 1 && (
           <Step1
             name={name}

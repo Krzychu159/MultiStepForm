@@ -18,7 +18,7 @@ export const Step2 = ({ duration, setDuration, plan, setPlan }: Props) => {
       </header>
 
       <main>
-        <section className="flex justify-between">
+        <section className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between">
           <PlanCard
             active={plan === "arcade"}
             duration={duration}

@@ -20,7 +20,7 @@ export const PlanCard = ({
   return (
     <div
       onClick={onClick}
-      className={`flex flex-col justify-between rounded-xl h-40 w-[30%] p-4 cursor-pointer
+      className={`flex md:flex-col md:justify-between items-center gap-5 md:gap-0 rounded-xl  md:h-40 md:w-[30%] p-4 cursor-pointer
         ${
           active
             ? "border border-[hsl(213,96%,18%)]"
@@ -28,7 +28,7 @@ export const PlanCard = ({
         }
       `}
     >
-      <img src={icon} alt={`${title} icon`} className="w-10 h-10 mb-6" />
+      <img src={icon} alt={`${title} icon`} className="w-10 h-10 md:mb-6" />
 
       <div>
         <div className="text-s font-medium text-primary-600 mb-1">{title}</div>

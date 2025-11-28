@@ -15,7 +15,7 @@ export const NavBarDesktop = ({ step, setStep }: Props) => {
     <div className="h-full">
       {/* --- MOBILE --- */}
 
-      <div className="md:hidden bg-[url('/assets/images/bg-sidebar-mobile.svg')] bg-no-repeat bg-cover w-full h-fit  rounded-xl p-6">
+      <div className="flex justify-center gap-5  md:hidden bg-[url('/assets/images/bg-sidebar-mobile.svg')] bg-no-repeat bg-cover w-full h-64   p-6">
         {steps.map((s) => (
           <div
             key={s.id}
@@ -33,15 +33,6 @@ export const NavBarDesktop = ({ step, setStep }: Props) => {
             `}
             >
               {s.id}
-            </div>
-
-            <div>
-              <div className="text-xs uppercase text-neutral-400">
-                Step {s.id}
-              </div>
-              <div className="text-s uppercase text-white font-bold">
-                {s.title}
-              </div>
             </div>
           </div>
         ))}
